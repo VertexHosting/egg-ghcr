@@ -1,4 +1,4 @@
-FROM        ghcr.io/hypernet-org-uk//yolks:debian
+FROM        ghcr.io/embotic-xyz/egg-ghcr:debian
 
 LABEL       author="Manuel Dielacher" maintainer="th3dilli@gmx.at"
 

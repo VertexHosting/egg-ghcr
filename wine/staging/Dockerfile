@@ -1,7 +1,7 @@
 # ---------------------------------------
 # Generic Wine image based on Wine staging 
 # ---------------------------------------
-FROM            ghcr.io/hypernet-org-uk//yolks:debian
+FROM            ghcr.io/embotic-xyz/egg-ghcr:debian
 
 LABEL           author="Embotic" maintainer="luke@embotic.xyz"
 LABEL           org.opencontainers.image.licenses=MIT

@@ -1,4 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH ghcr.io/hypernet-org-uk//yolks:debian
+FROM        --platform=$TARGETOS/$TARGETARCH ghcr.io/embotic-xyz/egg-ghcr:debian
 
 LABEL       author="Embotic" maintainer="luke@embotic.xyz"
 

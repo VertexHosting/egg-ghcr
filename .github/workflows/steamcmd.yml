@@ -39,5 +39,5 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/hypernet-org-uk/steamcmd:${{ matrix.distro }}
-            ghcr.io/hypernet-org-uk/steamcmd:${{ matrix.distro }}
+            ghcr.io/embotic-xyz/steamcmd:${{ matrix.distro }}
+            ghcr.io/embotic-xyz/steamcmd:${{ matrix.distro }}

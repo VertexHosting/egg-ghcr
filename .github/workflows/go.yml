@@ -42,5 +42,5 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/hypernet-org-uk/custom-yolks:go_${{ matrix.tag }}
-            ghcr.io/hypernet-org-uk/custom-yolks:go_${{ matrix.tag }}
+            ghcr.io/embotic-xyz/egg-ghcr:go_${{ matrix.tag }}
+            ghcr.io/embotic-xyz/egg-ghcr:go_${{ matrix.tag }}

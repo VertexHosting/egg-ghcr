@@ -39,5 +39,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/hypernet-org-uk/apps:${{ matrix.app }}
-            ghcr.io/hypernet-org-uk/apps:${{ matrix.app }}
+            ghcr.io/embotic-xyz/apps:${{ matrix.app }}
+            ghcr.io/embotic-xyz/apps:${{ matrix.app }}

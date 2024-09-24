@@ -35,5 +35,5 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: |
-            ghcr.io/hypernet-org-uk/custom-yolks:${{ matrix.tag }}
-            ghcr.io/hypernet-org-uk/custom-yolks:${{ matrix.tag }}
+            ghcr.io/embotic-xyz/egg-ghcr:${{ matrix.tag }}
+            ghcr.io/embotic-xyz/egg-ghcr:${{ matrix.tag }}

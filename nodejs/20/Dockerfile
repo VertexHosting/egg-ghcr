@@ -16,7 +16,6 @@ USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
-ENV         NODE_OPTIONS="--no-experimental-worker"
 
 STOPSIGNAL SIGINT
 

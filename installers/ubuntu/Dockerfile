@@ -24,7 +24,7 @@ FROM        --platform=$TARGETOS/$TARGETARCH ubuntu:jammy
 
 LABEL       author="Embotic" maintainer="luke@embotic.xyz"
 
-LABEL       org.opencontainers.image.source="https://github.com/hypernet-org.uk/Custom-Yolks"
+LABEL       org.opencontainers.image.source="https://github.com/hypernet-org.uk/embotic-xyz"
 LABEL       org.opencontainers.image.licenses=MIT
 
 ENV         DEBIAN_FRONTEND=noninteractive

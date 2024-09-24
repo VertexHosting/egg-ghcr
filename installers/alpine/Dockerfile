@@ -24,7 +24,7 @@ FROM        --platform=$TARGETOS/$TARGETARCH alpine:latest
 
 LABEL       author="Embotic" maintainer="luke@embotic.xyz"
 
-LABEL       org.opencontainers.image.source="https://github.com/hypernet-org.uk/Custom-Yolks"
+LABEL       org.opencontainers.image.source="https://github.com/hypernet-org.uk/embotic-xyz"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         apk add --update --no-cache ca-certificates curl unzip tar git jq wget

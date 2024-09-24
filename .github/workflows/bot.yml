@@ -10,7 +10,7 @@ on:
       - bot/**
 jobs:
   pushArm:
-    name: "custom-yolks:bot_${{ matrix.tag }}"
+    name: "embotic-xyz:bot_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -58,7 +58,7 @@ jobs:
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
 
   # pushAmd:
-  #   name: "custom-yolks:bot_${{ matrix.tag }}"
+  #   name: "embotic-xyz:bot_${{ matrix.tag }}"
   #   runs-on: ubuntu-latest
   #   strategy:
   #     fail-fast: false

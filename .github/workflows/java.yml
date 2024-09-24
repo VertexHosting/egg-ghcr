@@ -10,7 +10,7 @@ on:
       - java/**
 jobs:
   push:
-    name: "custom-yolks:java_${{ matrix.tag }}"
+    name: "embotic-xyz:java_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

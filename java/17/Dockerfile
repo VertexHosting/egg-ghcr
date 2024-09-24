@@ -2,7 +2,7 @@ FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:17-jdk-jammy
 
 LABEL       author="Embotic" maintainer="luke@embotic.xyz"
 
-LABEL       org.opencontainers.image.source="https://github.com/hypernet-org.uk/Custom-Yolks"
+LABEL       org.opencontainers.image.source="https://github.com/hypernet-org.uk/embotic-xyz"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         apt update -y \

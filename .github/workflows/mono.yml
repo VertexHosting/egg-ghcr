@@ -10,7 +10,7 @@ on:
       - mono/**
 jobs:
   push:
-    name: "custom-yolks:mono_${{ matrix.tag }}"
+    name: "embotic-xyz:mono_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

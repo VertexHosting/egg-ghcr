@@ -10,7 +10,7 @@ on:
       - voice/**
 jobs:
   pushx64:
-    name: "custom-yolks:voice_${{ matrix.tag }}"
+    name: "embotic-xyz:voice_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -39,7 +39,7 @@ jobs:
 
 
   pushx64_arm64:
-    name: "custom-yolks:voice_${{ matrix.tag }}"
+    name: "embotic-xyz:voice_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

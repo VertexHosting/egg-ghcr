@@ -10,7 +10,7 @@ on:
       - wine/**
 jobs:
   push:
-    name: "custom-yolks:wine_${{ matrix.tag }}"
+    name: "embotic-xyz:wine_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

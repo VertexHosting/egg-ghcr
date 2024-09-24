@@ -2,7 +2,7 @@ FROM        ghcr.io/hypernet-org-uk//yolks:debian
 
 LABEL       author="Manuel Dielacher" maintainer="th3dilli@gmx.at"
 
-LABEL       org.opencontainers.image.source="https://github.com/hypernet-org.uk/Custom-Yolks"
+LABEL       org.opencontainers.image.source="https://github.com/hypernet-org.uk/embotic-xyz"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN			dpkg --add-architecture i386 \

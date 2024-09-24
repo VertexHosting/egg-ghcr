@@ -10,7 +10,7 @@ on:
       - bun/**
 jobs:
   push:
-    name: "custom-yolks:bun_${{ matrix.tag }}"
+    name: "embotic-xyz:bun_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

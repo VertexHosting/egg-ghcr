@@ -10,7 +10,7 @@ on:
       - oses/**
 jobs:
   push:
-    name: "custom-yolks:${{ matrix.oses }}"
+    name: "embotic-xyz:${{ matrix.oses }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

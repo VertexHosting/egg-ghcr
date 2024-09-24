@@ -11,7 +11,7 @@ on:
       - postgres/**
 jobs:
   push:
-    name: "custom-yolks:postgres_${{ matrix.tag }}"
+    name: "embotic-xyz:postgres_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

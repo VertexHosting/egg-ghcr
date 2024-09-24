@@ -10,7 +10,7 @@ on:
       - dart/**
 jobs:
   push:
-    name: "custom-yolks:dart_${{ matrix.tag }}"
+    name: "embotic-xyz:dart_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

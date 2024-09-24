@@ -11,7 +11,7 @@ on:
       - mongodb/**
 jobs:
   push:
-    name: "custom-yolks:mongodb_${{ matrix.tag }}"
+    name: "embotic-xyz:mongodb_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

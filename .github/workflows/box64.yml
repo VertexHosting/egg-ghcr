@@ -10,7 +10,7 @@ on:
       - box64/**
 jobs:
   push:
-    name: "custom-yolks:${{ matrix.tag }}"
+    name: "embotic-xyz:${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

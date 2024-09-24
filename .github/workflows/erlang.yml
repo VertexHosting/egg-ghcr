@@ -10,7 +10,7 @@ on:
       - erlang/**
 jobs:
   push:
-    name: "custom-yolks:erlang_${{ matrix.tag }}"
+    name: "embotic-xyz:erlang_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

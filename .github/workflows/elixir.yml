@@ -10,7 +10,7 @@ on:
       - elixir/**
 jobs:
   push:
-    name: "custom-yolks:elixir_${{ matrix.tag }}"
+    name: "embotic-xyz:elixir_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

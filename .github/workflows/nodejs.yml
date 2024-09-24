@@ -10,7 +10,7 @@ on:
       - nodejs/**
 jobs:
   push:
-    name: "custom-yolks:nodejs_${{ matrix.tag }}"
+    name: "embotic-xyz:nodejs_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

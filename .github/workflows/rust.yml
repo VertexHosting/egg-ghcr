@@ -10,7 +10,7 @@ on:
       - rust/**
 jobs:
   push:
-    name: "custom-yolks:rust_${{ matrix.tag }}"
+    name: "embotic-xyz:rust_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

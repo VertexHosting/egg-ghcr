@@ -10,7 +10,7 @@ on:
       - go/**
 jobs:
   push:
-    name: "custom-yolks:go_${{ matrix.tag }}"
+    name: "embotic-xyz:go_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

@@ -10,7 +10,7 @@ on:
       - dotnet/**
 jobs:
   push:
-    name: "custom-yolks:dotnet_${{ matrix.tag }}"
+    name: "embotic-xyz:dotnet_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

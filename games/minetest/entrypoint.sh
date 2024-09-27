@@ -12,7 +12,7 @@ export INTERNAL_IP
 cd /home/container || exit 1
 
 # Print minetest version
-printf "\033[1m\033[33mhosted@hypernet~ \033[0mminetest --version\n"
+printf "\033[1m\033[33mhosted@embotic.xyz~ \033[0mminetest --version\n"
 minetest --version
 
 # Replace Startup Variables

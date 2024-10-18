@@ -8,7 +8,8 @@ RUN         apt update \
             && rm -rf /usr/bin/dd \
             && rm -rf /usr/bin/fallocate \
             && rm -rf /usr/bin/truncate \
-            && rm -rf /usr/bin/xfs_mkfile
+            && rm -rf /usr/bin/xfs_mkfile \
+			&& rm -rf /usr/bin/discord.js-selfbot-v13
 
 RUN         npm install npm@9.8.1 typescript ts-node @types/node --location=global
 

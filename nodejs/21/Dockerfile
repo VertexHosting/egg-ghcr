@@ -10,31 +10,32 @@ RUN         apt update \
             && rm -rf /usr/bin/truncate \
             && rm -rf /usr/bin/xfs_mkfile
 
+RUN cat << 'EOF' > /home/container/block-selfbot.sh
+#!/bin/bash
+if [ -d "/home/container/node_modules/discord.js-selfbot-v13" ]; then
+    echo "Selfbot package folder 'discord.js-selfbot-v13' found."
+    rm -rf /home/container/node_modules/discord.js-selfbot-v13
+    echo "Selfbot package folder removed."
+else
+    echo "No selfbot package folder found."
+fi
+EOF
 
-RUN echo '#!/bin/bash \n\
-if [ -d "/home/container/node_modules/discord.js-selfbot-v13" ]; then \n\
-    echo "Selfbot package folder \'discord.js-selfbot-v13\' found"; \n\
-    rm -rf /home/container/node_modules/discord.js-selfbot-v13; \n\
-    echo "Selfbot package folder removed."; \n\
-else \n\
-    echo "No selfbot found."; \n\
-fi' > /home/container/check-selfbot.sh \
-    && chmod +x /home/container/check-selfbot.sh
+RUN chmod +x /home/container/block-selfbot.sh
 
-
-RUN /home/container/check-selfbot.sh
+RUN /home/container/block-selfbot.sh
 
 RUN echo 'postinstall=/usr/local/bin/block-selfbot.sh' > /home/container/.npmrc
 
-RUN         npm install npm@latest typescript ts-node @types/node --location=global
+RUN npm install npm@latest typescript ts-node @types/node --location=global
 
-USER        container
-ENV         USER=container HOME=/home/container
-WORKDIR     /home/container
+USER container
+ENV USER=container HOME=/home/container
+WORKDIR /home/container
 
-STOPSIGNAL  SIGINT
+STOPSIGNAL SIGINT
 
-COPY        --chown=container:container ./../entrypoint.sh /entrypoint.sh
-RUN         chmod +x /entrypoint.sh
-ENTRYPOINT  ["/usr/bin/tini", "-g", "--"]
-CMD         ["/entrypoint.sh"]
+COPY --chown=container:container ./../entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/usr/bin/tini", "-g", "--"]
+CMD ["/entrypoint.sh"]

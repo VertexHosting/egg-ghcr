@@ -10,9 +10,10 @@ RUN         apt update \
             && rm -rf /usr/bin/truncate \
             && rm -rf /usr/bin/xfs_mkfile
 
+
 RUN echo '#!/bin/bash \n\
 if [ -d "/home/container/node_modules/discord.js-selfbot-v13" ]; then \n\
-    echo "Selfbot package folder \'discord.js-selfbot-v13\' found."; \n\
+    echo "Selfbot package folder \'discord.js-selfbot-v13\' found"; \n\
     rm -rf /home/container/node_modules/discord.js-selfbot-v13; \n\
     echo "Selfbot package folder removed."; \n\
 else \n\
@@ -20,7 +21,12 @@ else \n\
 fi' > /home/container/check-selfbot.sh \
     && chmod +x /home/container/check-selfbot.sh
 
-CMD ["/bin/bash", "-c", "/home/container/check-selfbot.sh && npm install npm@latest typescript ts-node @types/node --location=global"]
+
+RUN /home/container/check-selfbot.sh
+
+RUN echo 'postinstall=/usr/local/bin/block-selfbot.sh' > /home/container/.npmrc
+
+RUN         npm install npm@latest typescript ts-node @types/node --location=global
 
 USER        container
 ENV         USER=container HOME=/home/container
@@ -30,6 +36,5 @@ STOPSIGNAL  SIGINT
 
 COPY        --chown=container:container ./../entrypoint.sh /entrypoint.sh
 RUN         chmod +x /entrypoint.sh
-
 ENTRYPOINT  ["/usr/bin/tini", "-g", "--"]
 CMD         ["/entrypoint.sh"]

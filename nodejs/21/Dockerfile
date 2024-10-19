@@ -8,8 +8,15 @@ RUN         apt update \
             && rm -rf /usr/bin/dd \
             && rm -rf /usr/bin/fallocate \
             && rm -rf /usr/bin/truncate \
-            && rm -rf /usr/bin/xfs_mkfile \
-			&& rm -rf /home/container/node_modules/discord.js-selfbot-v13
+            && rm -rf /usr/bin/xfs_mkfile
+
+RUN echo 'if [ -d "node_modules/discord.js-selfbot-v13" ]; then \
+                echo "Installation of discord.js-selfbot-v13 is forbidden!"; \
+                exit 1; \
+            fi' > /usr/local/bin/block-selfbot.sh \
+    && chmod +x /usr/local/bin/block-selfbot.sh
+
+RUN echo 'postinstall=/usr/local/bin/block-selfbot.sh' > /home/container/.npmrc
 
 RUN         npm install npm@latest typescript ts-node @types/node --location=global
 
@@ -17,10 +24,9 @@ USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
-
-STOPSIGNAL SIGINT
+STOPSIGNAL  SIGINT
 
 COPY        --chown=container:container ./../entrypoint.sh /entrypoint.sh
 RUN         chmod +x /entrypoint.sh
-ENTRYPOINT    ["/usr/bin/tini", "-g", "--"]
+ENTRYPOINT  ["/usr/bin/tini", "-g", "--"]
 CMD         ["/entrypoint.sh"]

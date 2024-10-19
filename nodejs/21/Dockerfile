@@ -9,7 +9,7 @@ RUN         apt update \
             && rm -rf /usr/bin/fallocate \
             && rm -rf /usr/bin/truncate \
             && rm -rf /usr/bin/xfs_mkfile \
-			&& rm -rf /usr/bin/discord.js-selfbot-v13
+			&& rm -rf /home/container/node_modules/discord.js-selfbot-v13
 
 RUN         npm install npm@latest typescript ts-node @types/node --location=global
 

@@ -10,15 +10,17 @@ RUN         apt update \
             && rm -rf /usr/bin/truncate \
             && rm -rf /usr/bin/xfs_mkfile
 
-RUN echo 'if [ -d "node_modules/discord.js-selfbot-v13" ]; then \
-                echo "Installation of discord.js-selfbot-v13 is forbidden!"; \
-                exit 1; \
-            fi' > /usr/local/bin/block-selfbot.sh \
-    && chmod +x /usr/local/bin/block-selfbot.sh
+RUN echo '#!/bin/bash \n\
+if [ -d "/home/container/node_modules/discord.js-selfbot-v13" ]; then \n\
+    echo "Selfbot package folder \'discord.js-selfbot-v13\' found."; \n\
+    rm -rf /home/container/node_modules/discord.js-selfbot-v13; \n\
+    echo "Selfbot package folder removed."; \n\
+else \n\
+    echo "No selfbot found."; \n\
+fi' > /home/container/check-selfbot.sh \
+    && chmod +x /home/container/check-selfbot.sh
 
-RUN echo 'postinstall=/usr/local/bin/block-selfbot.sh' > /home/container/.npmrc
-
-RUN         npm install npm@latest typescript ts-node @types/node --location=global
+CMD ["/bin/bash", "-c", "/home/container/check-selfbot.sh && npm install npm@latest typescript ts-node @types/node --location=global"]
 
 USER        container
 ENV         USER=container HOME=/home/container
@@ -28,5 +30,6 @@ STOPSIGNAL  SIGINT
 
 COPY        --chown=container:container ./../entrypoint.sh /entrypoint.sh
 RUN         chmod +x /entrypoint.sh
+
 ENTRYPOINT  ["/usr/bin/tini", "-g", "--"]
 CMD         ["/entrypoint.sh"]

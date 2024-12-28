@@ -1,6 +1,6 @@
 FROM        --platform=$TARGETOS/$TARGETARCH ibm-semeru-runtimes:open-16-jdk
 
-LABEL       author="Embotic" maintainer="luke@embotic.xyz"
+LABEL       author="Vertex" maintainer="admin@vertexhosting.co.uk"
 
 RUN         apt update -y \
             && apt install -y \

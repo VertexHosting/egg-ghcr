@@ -1,6 +1,6 @@
 FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:8u312-b07-jdk-focal
 
-LABEL       author="Embotic" maintainer="luke@embotic.xyz"
+LABEL       author="Vertex" maintainer="admin@vertexhosting.co.uk"
 
 LABEL       org.opencontainers.image.source="https://github.com/hypernet-org.uk/embotic-xyz"
 LABEL       org.opencontainers.image.licenses=MIT

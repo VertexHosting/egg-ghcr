@@ -1,11 +1,11 @@
 ## Java
 
 - ghcr.io/vertexhosting/java:21
-ghcr.io/vertexhosting/java:19
-ghcr.io/vertexhosting/java:17
-ghcr.io/vertexhosting/java:16
-ghcr.io/vertexhosting/java:11
-ghcr.io/vertexhosting/java:8
+- ghcr.io/vertexhosting/java:19
+- ghcr.io/vertexhosting/java:17
+- ghcr.io/vertexhosting/java:16
+- ghcr.io/vertexhosting/java:11
+- ghcr.io/vertexhosting/java:8
 
 ## Python
 

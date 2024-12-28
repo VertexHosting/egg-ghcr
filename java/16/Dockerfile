@@ -2,7 +2,7 @@ FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:16-jdk-focal
 
 LABEL       author="Vertex" maintainer="admin@vertexhosting.co.uk"
 
-LABEL       org.opencontainers.image.source="https://github.com/hypernet-org.uk/embotic-xyz"
+LABEL       org.opencontainers.image.source="https://github.com/VertexHosting"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         apt update -y \

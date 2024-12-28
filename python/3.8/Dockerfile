@@ -1,6 +1,6 @@
 FROM        --platform=$TARGETOS/$TARGETARCH python:3.8-slim-bookworm
 
-LABEL       author="Embotic" maintainer="luke@embotic.xyz"
+LABEL       author="Vertex" maintainer="admin@vertexhosting.co.uk"
 
 RUN         apt update \
             && apt -y install git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps tini \

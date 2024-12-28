@@ -29,5 +29,3 @@
 - ghcr.io/vertexhosting/nodejs:16
 - ghcr.io/vertexhosting/nodejs:14
 - ghcr.io/vertexhosting/nodejs:12
-
-Orignal Files From Luke@Embotic , Modified by Vertex Hosting
